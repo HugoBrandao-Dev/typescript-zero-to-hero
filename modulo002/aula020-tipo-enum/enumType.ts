@@ -36,5 +36,5 @@ function fruta(f: Fruta) {
 }
 
 console.log(fruta(Fruta.Cupuacu));
-console.log(fruta(5));
+console.log(fruta(3));
 console.log(fruta(Fruta.Maracuja));
