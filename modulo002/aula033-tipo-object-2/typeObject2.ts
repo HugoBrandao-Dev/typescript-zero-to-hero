@@ -86,13 +86,35 @@ type Usuario = {
     email: string;
 }
 
+type Admin = {
+    nome: string;
+    email: string;
+    admin: boolean;
+}
+
 const usuario: Usuario = {
     nome: 'Josias Cruz',
     email: 'josias@hotmail.com'
 }
 
+const admin: Admin = {
+    nome: "Doralice Cruz",
+    email: "dora_cruz@yahoo.com",
+    admin: true
+}
+
+/*
 function acessarSistema(usuario: Usuario): Usuario {
     return usuario;
 }
 
 console.log(acessarSistema(usuario));
+*/
+
+// <T> - Índica que é uma função genérica, podendo usar qualquer letra, mas o mais recomendado é o T.
+function acessarSistema<T>(usuario: T): T {
+    return usuario;
+}
+
+console.log(acessarSistema<Usuario>(usuario));
+console.log(acessarSistema<Admin>(admin));
